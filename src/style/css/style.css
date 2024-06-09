@@ -1,0 +1,105 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.add-note-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-note-btn:hover {
+  background-color: #0056b3;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note {
+  background: #fafafa;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  width: 300px;
+}
+
+.noteList {
+  display: flex;
+}
+
+.note h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.note p {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.note .note-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.note button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.note button:hover {
+  background-color: #218838;
+}
+
+.note .delete-note-btn {
+  background-color: #dc3545;
+}
+
+.note .delete-note-btn:hover {
+  background-color: #c82333;
+}
