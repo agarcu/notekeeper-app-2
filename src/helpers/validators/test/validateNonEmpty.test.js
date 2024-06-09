@@ -1,25 +1,17 @@
 import { test, expect } from "vitest";
-import { validateType } from "../validateType";
+import { validateNonEmpty } from "../validateNonEmpty";
 
-test("validates note object types correctly", () => {
+test("validates non-empty properties correctly", () => {
   const validNote = {
     name: "Sample Note",
     description: "This is a sample note",
-    status: "pending",
-    important: true,
-    dueDate: "2023-06-10",
   };
 
   const invalidNote = {
-    name: "Sample Note",
+    name: "",
     description: "This is a sample note",
-    status: "pending",
-    important: "true", // incorrect type
-    dueDate: "2023-06-10",
   };
 
-  expect(validateType(validNote)).toBe(true);
-  expect(validateType(invalidNote)).toBe(false);
+  expect(validateNonEmpty(validNote)).toBe(true);
+  expect(validateNonEmpty(invalidNote)).toBe(false);
 });
-{
-}

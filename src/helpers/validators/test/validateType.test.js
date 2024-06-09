@@ -1,16 +1,25 @@
-import { expect, test } from "vitest";
+import { test, expect } from "vitest";
 import { validateType } from "../validateType";
 
-test("validateType should return true if the given value is equal to the given type", () => {
-  const value = 6;
-  const type = "number";
+test("validates note object types correctly", () => {
+  const validNote = {
+    name: "Sample Note",
+    description: "This is a sample note",
+    status: "pending",
+    important: true,
+    dueDate: "2023-06-10",
+  };
 
-  expect(validateType(type, value)).toBe(true);
+  const invalidNote = {
+    name: "Sample Note",
+    description: "This is a sample note",
+    status: "pending",
+    important: "true", // incorrect type
+    dueDate: "2023-06-10",
+  };
+
+  expect(validateType(validNote)).toBe(true);
+  expect(validateType(invalidNote)).toBe(false);
 });
-
-test("validateType should return false if the given value isn't equal to the given type", () => {
-  const value = "hello";
-  const type = "number";
-
-  expect(validateType(type, value)).toBe(false);
-});
+{
+}
